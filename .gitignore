@@ -1,0 +1,8 @@
+# Public documentation only. Patch packages are GitHub Release assets.
+*
+!.gitignore
+!README.md
+!CHANGELOG.md
+!CREDITS.md
+!THIRD_PARTY_NOTICES.md
+!OFL-1.1.txt
