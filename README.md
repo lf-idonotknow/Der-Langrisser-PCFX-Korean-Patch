@@ -1,26 +1,29 @@
-# 데어 랑그릿사 PC-FX 한국어 패치 v0.1.0
+# 데어 랑그릿사 PC-FX 한국어 패치 v0.8.0
 
-《데어 랑그릿사》 PC-FX판 비공식 한국어 패치입니다. 이 패키지는 2026-09-04에 공개한 **v0.1.0 사전 검수본(Pre-release)**입니다. 대사·메뉴·정보창, 동영상 자막과 재생 복귀 수정, 전리품 메시지 수정, 후일담 출력 수정과 134개 문맥 교정까지 포함합니다. 원본에 이 패치 하나만 적용하며 과거 패치를 먼저 적용하지 않습니다.
+《데어 랑그릿사》 PC-FX판 비공식 한국어 패치 **v0.8.0 베타판**입니다. 대사·메뉴·정보창, 동영상 자막과 재생 복귀 수정, 전리품 메시지 수정, 후일담 출력 수정과 134개 문맥 교정까지 포함합니다. 원본에 이 패치 하나만 적용하며 과거 패치를 먼저 적용하지 않습니다.
 
-정식 완성판은 아닙니다. 전체 게임 사람 플레이·언어 검수와 후일담의 실제 화면 수용 검사가 남아 있습니다. 수정되지 않은 타이틀·로고·배경·이벤트 그림 속 문자까지 모두 한글화했다고 주장하지 않습니다.
+**빛의 후예 시나리오는 제작자가 엔딩까지 직접 플레이하며 검수했습니다.** 다른 분기와 모든 후일담 조합의 검수까지 완료된 것은 아니므로 GitHub에서는 Pre-release로 제공합니다. 수정되지 않은 타이틀·로고·배경·이벤트 그림 속 문자는 전수 한글화 완료 범위가 아닙니다.
 
 공개 버전은 `주.부.수정` 형식으로 표기하며 내부 개발 번호와 별도로 관리합니다.
 
 ## 다운로드
 
-- [v0.1.0 사전 검수 릴리스](https://github.com/lf-idonotknow/Der-Langrisser-PCFX-Korean-Patch/releases/tag/v0.1.0)
-- [패치 ZIP 다운로드](https://github.com/lf-idonotknow/Der-Langrisser-PCFX-Korean-Patch/releases/download/v0.1.0/Der-Langrisser-PCFX-Korean-Patch-v0.1.0.zip)
+- [v0.8.0 베타 릴리스](https://github.com/lf-idonotknow/Der-Langrisser-PCFX-Korean-Patch/releases/tag/v0.8.0)
+- [패치 ZIP 다운로드](https://github.com/lf-idonotknow/Der-Langrisser-PCFX-Korean-Patch/releases/download/v0.8.0/Der-Langrisser-PCFX-Korean-Patch-v0.8.0.zip)
+
+v0.1.0과 패치 데이터·적용 결과는 동일합니다. 이미 적용하셨다면 다시 적용할 필요가 없습니다.
 
 GitHub의 `Source code (zip)`이 아니라 위 패치 ZIP을 받으십시오. 패치·적용기·CUE·설명·고지·검증용 해시 목록이 함께 들어 있습니다. ROM과 BIOS는 제공하지 않습니다.
 
 ZIP SHA-256:
 
 ```text
-2c03d4954129bfcae5404ce2d7d0d5a3695e47682b5b31897ad84cba0f0eb5b2
+ba9ee5de8a86ac7778aac4131c108a6b1f289bb6ec828ab4c426f3e589504151
 ```
 
 ## 확인한 범위
 
+- 제작자가 빛의 후예 시나리오를 엔딩까지 직접 플레이하며 검수했습니다.
 - macOS에서 원본에 차분을 적용한 결과가 아래 목표 BIN/CUE 해시와 정확히 일치합니다.
 - 동봉 적용기는 잘못된 원본 크기·BIN/CUE 해시·변조된 패치를 거부하고 기존 출력 폴더를 보호합니다.
 - 이번 ZIP의 Windows·Linux 적용은 아직 확인하지 않았습니다. 아래 해당 OS 명령은 사용 안내이며 실행 검증 완료를 뜻하지 않습니다.
@@ -77,7 +80,9 @@ py .\apply_derl_pcfx_text_patch.py `
 
 에뮬레이터에서는 생성된 **CUE**를 여십시오. 원본 CUE를 결과 BIN에 재사용하지 마십시오. 기존 메모리카드 세이브는 별도로 백업하고, 세이브스테이트의 버전 간 호환성은 보장하지 않습니다.
 
-## 이번 검수에서 확인할 화면
+## 추가 검수·오류 제보
+
+빛의 후예 엔딩까지의 직접 검수는 완료됐습니다. 다른 분기나 아래 화면에서 문제를 발견하시면 알려 주십시오.
 
 - 기본 주인공 이름이 `엘윈`으로 표시되는지
 - 루시리스의 클래스 작성 질문과 선택지가 모두 한글인지
@@ -89,7 +94,7 @@ py .\apply_derl_pcfx_text_patch.py `
 - `소환`, `지휘범위`, `보정`과 전리품 획득·폐기·자동 장비 안내가 상황에 맞는지
 - 모든 캐릭터의 후일담에서 조사·주체·문장 연결·페이지 전환이 자연스러운지
 
-문제가 있으면 [Issues](https://github.com/lf-idonotknow/Der-Langrisser-PCFX-Korean-Patch/issues)에 패치 버전, 에뮬레이터, 발생 지점, 직전 조작과 화면을 기록해 주십시오. ROM·BIOS·세이브·계정정보·개인 경로는 첨부하지 마십시오. 전체 게임의 사람 플레이·언어·가독성 검수가 끝나기 전까지 이 패키지는 정식판이 아닙니다.
+문제가 있으면 [Issues](https://github.com/lf-idonotknow/Der-Langrisser-PCFX-Korean-Patch/issues)에 패치 버전, 에뮬레이터, 발생 지점, 직전 조작과 화면을 기록해 주십시오. ROM·BIOS·세이브·계정정보·개인 경로는 첨부하지 마십시오.
 
 ## 크레딧과 변경 이력
 
