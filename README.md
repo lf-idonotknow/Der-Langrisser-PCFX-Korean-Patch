@@ -1,25 +1,27 @@
-# 데어 랑그릿사 PC-FX 한국어 패치 Preview r123/v52
+# 데어 랑그릿사 PC-FX 한국어 패치 v0.1.0
 
-《데어 랑그릿사》 PC-FX판 비공식 한국어 패치입니다. 이 패키지는 2026-09-04의 **r123/v52 누적 한글판**을 재현하는 사전 검수본입니다. 대사·메뉴·정보창, 동영상 자막과 재생 복귀 수정, 전리품 메시지 수정, 후일담 출력 수정과 134개 문맥 교정까지 포함합니다. 원본에 이 패치 하나만 적용하며 과거 패치를 먼저 적용하지 않습니다.
+《데어 랑그릿사》 PC-FX판 비공식 한국어 패치입니다. 이 패키지는 2026-09-04에 공개한 **v0.1.0 사전 검수본(Pre-release)**입니다. 대사·메뉴·정보창, 동영상 자막과 재생 복귀 수정, 전리품 메시지 수정, 후일담 출력 수정과 134개 문맥 교정까지 포함합니다. 원본에 이 패치 하나만 적용하며 과거 패치를 먼저 적용하지 않습니다.
 
-정식 배포판은 아닙니다. 전체 게임 사람 플레이·언어 검수와 r123 후일담의 실제 화면 수용 검사가 남아 있습니다. 수정되지 않은 타이틀·로고·배경·이벤트 그림 속 문자까지 모두 한글화했다고 주장하지 않습니다.
+정식 완성판은 아닙니다. 전체 게임 사람 플레이·언어 검수와 후일담의 실제 화면 수용 검사가 남아 있습니다. 수정되지 않은 타이틀·로고·배경·이벤트 그림 속 문자까지 모두 한글화했다고 주장하지 않습니다.
+
+공개 버전은 `주.부.수정` 형식으로 표기하며 내부 개발 번호와 별도로 관리합니다.
 
 ## 다운로드
 
-- [r123/v52 사전 검수 릴리스](https://github.com/lf-idonotknow/Der-Langrisser-PCFX-Korean-Patch/releases/tag/preview-r123-v52)
-- [패치 ZIP 다운로드](https://github.com/lf-idonotknow/Der-Langrisser-PCFX-Korean-Patch/releases/download/preview-r123-v52/Der-Langrisser-FX-Korean-Preview-r123-v52.zip)
+- [v0.1.0 사전 검수 릴리스](https://github.com/lf-idonotknow/Der-Langrisser-PCFX-Korean-Patch/releases/tag/v0.1.0)
+- [패치 ZIP 다운로드](https://github.com/lf-idonotknow/Der-Langrisser-PCFX-Korean-Patch/releases/download/v0.1.0/Der-Langrisser-PCFX-Korean-Patch-v0.1.0.zip)
 
 GitHub의 `Source code (zip)`이 아니라 위 패치 ZIP을 받으십시오. 패치·적용기·CUE·설명·고지·검증용 해시 목록이 함께 들어 있습니다. ROM과 BIOS는 제공하지 않습니다.
 
 ZIP SHA-256:
 
 ```text
-c3d0d4ac78a61b490ed71939d2132a46b7b46f2bc4a08f191c69d41372a3450d
+2c03d4954129bfcae5404ce2d7d0d5a3695e47682b5b31897ad84cba0f0eb5b2
 ```
 
 ## 확인한 범위
 
-- macOS에서 원본에 차분을 적용한 결과가 기준 r123/v52 BIN과 정확히 일치합니다.
+- macOS에서 원본에 차분을 적용한 결과가 아래 목표 BIN/CUE 해시와 정확히 일치합니다.
 - 동봉 적용기는 잘못된 원본 크기·BIN/CUE 해시·변조된 패치를 거부하고 기존 출력 폴더를 보호합니다.
 - 이번 ZIP의 Windows·Linux 적용은 아직 확인하지 않았습니다. 아래 해당 OS 명령은 사용 안내이며 실행 검증 완료를 뜻하지 않습니다.
 
@@ -92,7 +94,7 @@ py .\apply_derl_pcfx_text_patch.py `
 ## 크레딧과 변경 이력
 
 - 작업 역할과 참고자료 출처: [CREDITS.md](CREDITS.md)
-- 검수본별 변경 및 폐기 상태: [CHANGELOG.md](CHANGELOG.md)
+- 공개 버전별 변경 이력: [CHANGELOG.md](CHANGELOG.md)
 
 ## 배포 주의
 
