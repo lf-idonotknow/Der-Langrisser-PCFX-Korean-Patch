@@ -2,9 +2,7 @@
 
 PC-FX판 《데어 랑그릿사 FX》의 비공식 한국어 패치입니다. 게임 내 대사와 메뉴를 한글화하고, 동영상에 한국어 자막을 제공합니다.
 
-## 다운로드
-
-[v0.8.0 패치 ZIP](https://github.com/lf-idonotknow/Der-Langrisser-PCFX-Korean-Patch/releases/download/v0.8.0/Der-Langrisser-PCFX-Korean-Patch-v0.8.0.zip)을 내려받으십시오. GitHub의 `Source code` ZIP에는 적용에 필요한 패치 데이터가 들어 있지 않습니다.
+[패치 ZIP 다운로드](https://github.com/lf-idonotknow/Der-Langrisser-PCFX-Korean-Patch/releases/download/v0.8.0/Der-Langrisser-PCFX-Korean-Patch-v0.8.0.zip)
 
 ## 한글화 내용
 
@@ -25,11 +23,14 @@ PC-FX판 《데어 랑그릿사 FX》의 비공식 한국어 패치입니다. �
 ## 준비물
 
 - PC-FX 일본판 원본 `Der Langrisser FX.bin`
-- 원본 `Der Langrisser FX.cue`
-- Python 3.9 이상
-- xdelta3
+- xdelta 패처(xdelta UI 또는 Delta Patcher)
+- 약 1GB의 출력 공간
 
-원본 게임과 BIOS는 제공하지 않습니다. xdelta3는 [공식 프로젝트](https://github.com/jmacd/xdelta)에서 별도로 준비해 주십시오.
+**일반 xdelta 패처로 적용할 수 있으며 Python은 필요하지 않습니다.** 이미 쓰고 계신 xdelta UI가 있으면 그대로 사용하시면 됩니다.
+
+패처가 없다면 [Delta Patcher 공식 다운로드](https://github.com/marco-calautti/DeltaPatcher/releases/latest)에서 운영체제에 맞는 파일을 받으십시오. 일반 Windows PC는 `windows_bin_x86_64.zip`을 풀고 `DeltaPatcher.exe`를 실행하면 됩니다. Delta Patcher에는 xdelta 기능이 포함되어 있어 별도 `xdelta3.exe`가 필요하지 않습니다.
+
+원본 게임과 BIOS는 제공하지 않습니다.
 
 ## 지원 원본
 
@@ -39,19 +40,54 @@ PC-FX판 《데어 랑그릿사 FX》의 비공식 한국어 패치입니다. �
 - 크기: 775,880,112바이트
 - SHA-256: `a1a2a501400bc5d9b3a06ba4600e4e7dee686974c089916c2b8f9ff7abb7cb73`
 
-원본 BIN과 함께 사용하는 원본 `Der Langrisser FX.cue`도 필요합니다.
+이미 한글 패치를 적용한 BIN, CHD, 여러 트랙으로 나뉜 BIN에는 적용하지 마십시오.
 
 ## 적용 방법
 
-1. 패치 ZIP을 내려받아 압축을 풉니다.
-2. 동봉된 `README_KO.md`에 따라 원본 BIN과 CUE를 지정하여 적용기를 실행합니다.
-3. 적용이 끝나면 생성된 한국어판 CUE 파일을 에뮬레이터에서 실행합니다.
+패치 ZIP `Der-Langrisser-PCFX-Korean-Patch-v0.8.0.zip`을 내려받아 압축을 풉니다. GitHub의 `Source code` ZIP은 패치 파일이 아닙니다. 아래 두 방법 중 사용 중인 패처에 맞는 하나만 실행하십시오.
 
-패치는 지원 원본에 적용합니다. 원본 파일은 변경하지 않으며, 한국어판 파일을 별도의 폴더에 생성합니다.
+### xdelta UI를 사용하는 경우
 
-출력 폴더는 적용 전에 존재하지 않는 새 경로를 지정해 주십시오. 적용에는 약 1GB의 여유 공간이 필요합니다.
+1. xdelta UI의 **Apply Patch** 탭을 엽니다.
+2. 다음과 같이 파일을 지정합니다.
 
-동봉 적용기가 원본과 적용 결과의 크기 및 SHA-256을 자동으로 확인합니다.
+| 항목 | 선택할 파일 |
+|---|---|
+| Patch | 압축을 푼 `Der-Langrisser-PCFX-Korean-Patch-v0.8.0.xdelta` |
+| Source File | 본인이 보유한 원본 `Der Langrisser FX.bin` |
+| Output File | 새 폴더 안의 `Der Langrisser FX Korean.bin` |
+
+3. **Patch** 버튼을 누르고 완료될 때까지 기다립니다. 출력 경로는 원본 BIN과 다른 경로로 지정하십시오.
+4. ZIP에 동봉된 **`Der Langrisser FX Korean.cue`**를 결과 BIN과 같은 폴더에 복사합니다.
+5. 에뮬레이터에서 **`Der Langrisser FX Korean.cue`**를 엽니다.
+
+### Delta Patcher를 사용하는 경우
+
+1. 새 폴더를 만들고 원본 BIN을 **복사**한 뒤, 복사본 이름을 `Der Langrisser FX Korean.bin`으로 바꿉니다. Delta Patcher는 선택한 파일을 갱신하므로 반드시 복사본을 사용하십시오.
+2. **Original file**에 방금 만든 `Der Langrisser FX Korean.bin` 복사본을 선택합니다.
+3. **XDelta patch**에 `Der-Langrisser-PCFX-Korean-Patch-v0.8.0.xdelta`를 선택합니다.
+4. **Apply patch**를 누르고 성공 메시지를 확인합니다. `Checksum validation`은 켜 둡니다.
+5. 동봉된 `Der Langrisser FX Korean.cue`를 같은 폴더에 복사하고 에뮬레이터에서 이 CUE를 엽니다.
+
+패치는 BIN에만 적용합니다. CUE에는 패치를 적용하지 않으며, **반드시 동봉된 한국어판 CUE**를 사용해야 합니다.
+
+### 적용 중 오류가 나는 경우
+
+- 패치 파일이 보이지 않으면 ZIP을 먼저 풀었는지 확인하십시오. 배포 파일은 이미 `.xdelta`이므로 확장자를 바꿀 필요가 없습니다.
+- `checksum mismatch` 등이 나오면 원본 BIN의 크기와 아래 SHA-256을 확인하십시오. 검사 기능을 끄거나 이미 패치한 BIN에 다시 적용하지 마십시오.
+- 파일명이 자동으로 달라졌다면 최종 BIN 이름을 `Der Langrisser FX Korean.bin`으로 맞추십시오. CUE와 BIN은 같은 폴더에 있어야 합니다.
+
+### Python 적용기(선택 사항)
+
+원본과 결과의 SHA-256을 자동 검사하려는 분을 위한 보조 적용기입니다. 위 xdelta 방법으로 적용했다면 실행할 필요가 없습니다.
+
+Python 3.9 이상과 `xdelta3`를 준비하고, 패치 압축을 푼 폴더에서 다음을 실행합니다. `원본폴더`는 실제 원본 BIN/CUE가 있는 경로로 바꾸고, `한국어판`은 아직 존재하지 않는 출력 폴더로 지정하십시오.
+
+```sh
+python apply_derl_pcfx_text_patch.py --source-bin "원본폴더/Der Langrisser FX.bin" --source-cue "원본폴더/Der Langrisser FX.cue" --output-dir "한국어판"
+```
+
+macOS·Linux에서 `python` 명령이 없으면 `python3`를 사용하십시오. xdelta3가 PATH에 없다면 `--xdelta3 "xdelta3 실행 파일 경로"`를 덧붙입니다.
 
 ## 패치 적용 결과
 
@@ -85,4 +121,4 @@ ROM·BIOS 파일이나 계정 정보는 첨부하지 마십시오.
 
 게임 및 원작의 저작권은 각 권리자에게 있습니다. 이 패치는 팬이 제작한 비공식 번역 패치이며, 원본 또는 패치된 전체 디스크 이미지를 포함하지 않습니다.
 
-글꼴과 제3자 구성요소의 출처 및 라이선스는 [CREDITS.md](CREDITS.md), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), [OFL-1.1.txt](OFL-1.1.txt)를 확인해 주십시오.
+글꼴과 제3자 구성요소의 출처 및 라이선스는 `CREDITS.md`, `THIRD_PARTY_NOTICES.md`, `OFL-1.1.txt`를 확인해 주십시오.

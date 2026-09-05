@@ -13,10 +13,11 @@ Galmuri 원본 폰트 파일 전체는 이 패키지에 포함하지 않습니�
 
 ## xdelta
 
-VCDIFF 패치는 `xdelta3 3.1.0`으로 생성하고 검증했습니다. 이 패키지는 xdelta 실행 파일이나 소스 코드를 포함하지 않습니다. 사용자는 공식 프로젝트에서 별도로 호환 실행 파일을 준비해야 합니다.
+동봉된 `.xdelta` 파일은 `xdelta3 3.1.0`으로 생성하고 검증한 VCDIFF 패치입니다. 이 패키지는 패처 실행 파일이나 소스 코드를 포함하지 않습니다. xdelta UI 등 호환 패처 또는 xdelta 기능을 내장한 Delta Patcher로 적용할 수 있습니다.
 
 - 공식 프로젝트: https://github.com/jmacd/xdelta
 - 형식: VCDIFF / RFC 3284
+- Delta Patcher 공식 다운로드: https://github.com/marco-calautti/DeltaPatcher/releases/latest
 
 ## 원본 게임
 
