@@ -1,8 +1,17 @@
-# 데어 랑그릿사 FX 한국어 패치 v0.8.0
+# 데어 랑그릿사 FX 한국어 패치 v0.8.1
 
 PC-FX판 《데어 랑그릿사 FX》의 비공식 한국어 패치입니다. 게임 내 대사와 메뉴를 한글화하고, 동영상에 한국어 자막을 제공합니다.
 
-[패치 ZIP 다운로드](https://github.com/lf-idonotknow/Der-Langrisser-PCFX-Korean-Patch/releases/download/v0.8.0/Der-Langrisser-PCFX-Korean-Patch-v0.8.0.zip)
+[패치 ZIP 다운로드](https://github.com/lf-idonotknow/Der-Langrisser-PCFX-Korean-Patch/releases/download/v0.8.1/Der-Langrisser-PCFX-Korean-Patch-v0.8.1.zip)
+
+## 이번 업데이트
+
+- 타이틀 화면의 로고를 `데어 랑그릿사 FX`로 한글화했습니다.
+- 시작 메뉴를 `시작 / 불러오기`로 한글화했습니다.
+- 오프닝 동영상 마지막의 로고도 한글화하고, 정지 타이틀로 넘어갈 때 위치가 어긋나지 않도록 맞췄습니다.
+- 기존 대사·메뉴·동영상 자막·후일담 한글화는 유지됩니다.
+
+**기존 버전을 사용하셨더라도, 한글판에 덧씌우지 말고 미패치 일본판 원본 BIN에 이번 패치를 적용하십시오. CUE도 이번 ZIP에 들어 있는 파일로 교체해야 합니다.**
 
 ## 한글화 내용
 
@@ -44,7 +53,7 @@ PC-FX판 《데어 랑그릿사 FX》의 비공식 한국어 패치입니다. �
 
 ## 적용 방법
 
-패치 ZIP `Der-Langrisser-PCFX-Korean-Patch-v0.8.0.zip`을 내려받아 압축을 풉니다. GitHub의 `Source code` ZIP은 패치 파일이 아닙니다. 아래 두 방법 중 사용 중인 패처에 맞는 하나만 실행하십시오.
+패치 ZIP `Der-Langrisser-PCFX-Korean-Patch-v0.8.1.zip`을 내려받아 압축을 풉니다. GitHub의 `Source code` ZIP은 패치 파일이 아닙니다. 아래 두 방법 중 사용 중인 패처에 맞는 하나만 실행하십시오.
 
 ### xdelta UI를 사용하는 경우
 
@@ -53,7 +62,7 @@ PC-FX판 《데어 랑그릿사 FX》의 비공식 한국어 패치입니다. �
 
 | 항목 | 선택할 파일 |
 |---|---|
-| Patch | 압축을 푼 `Der-Langrisser-PCFX-Korean-Patch-v0.8.0.xdelta` |
+| Patch | 압축을 푼 `Der-Langrisser-PCFX-Korean-Patch-v0.8.1.xdelta` |
 | Source File | 본인이 보유한 원본 `Der Langrisser FX.bin` |
 | Output File | 새 폴더 안의 `Der Langrisser FX Korean.bin` |
 
@@ -65,11 +74,25 @@ PC-FX판 《데어 랑그릿사 FX》의 비공식 한국어 패치입니다. �
 
 1. 새 폴더를 만들고 원본 BIN을 **복사**한 뒤, 복사본 이름을 `Der Langrisser FX Korean.bin`으로 바꿉니다. Delta Patcher는 선택한 파일을 갱신하므로 반드시 복사본을 사용하십시오.
 2. **Original file**에 방금 만든 `Der Langrisser FX Korean.bin` 복사본을 선택합니다.
-3. **XDelta patch**에 `Der-Langrisser-PCFX-Korean-Patch-v0.8.0.xdelta`를 선택합니다.
+3. **XDelta patch**에 `Der-Langrisser-PCFX-Korean-Patch-v0.8.1.xdelta`를 선택합니다.
 4. **Apply patch**를 누르고 성공 메시지를 확인합니다. `Checksum validation`은 켜 둡니다.
 5. 동봉된 `Der Langrisser FX Korean.cue`를 같은 폴더에 복사하고 에뮬레이터에서 이 CUE를 엽니다.
 
 패치는 BIN에만 적용합니다. CUE에는 패치를 적용하지 않으며, **반드시 동봉된 한국어판 CUE**를 사용해야 합니다.
+
+### CUE를 함께 써야 하는 이유
+
+BIN은 게임 데이터이고, CUE는 그 데이터와 음악 트랙의 위치를 알려 주는 안내표입니다. 한글화 데이터를 추가하면서 뒤쪽 데이터와 음악 트랙의 시작 위치가 달라졌습니다. 원본이나 이전 버전 CUE를 쓰면 잘못된 위치를 읽어 게임이 시작되지 않거나 BIOS 화면으로 돌아갈 수 있습니다. **BIN 이름만 바꾸는 것으로 해결되지 않습니다. 이번 ZIP의 CUE를 사용하십시오.**
+
+최종 폴더에는 다음 두 파일이 나란히 있어야 합니다.
+
+```text
+한국어판/
+  Der Langrisser FX Korean.bin
+  Der Langrisser FX Korean.cue
+```
+
+RetroArch에서는 BIN이 아니라 위 **CUE를 콘텐츠로 불러옵니다**. CHD가 필요하면 먼저 이 BIN/CUE로 정상 실행을 확인한 뒤, 이번 CUE를 입력으로 변환하십시오. 원본 CHD나 이전 한글판 CHD에 패치를 적용하지 마십시오.
 
 ### 적용 중 오류가 나는 경우
 
@@ -91,15 +114,15 @@ macOS·Linux에서 `python` 명령이 없으면 `python3`를 사용하십시오.
 
 ## 패치 적용 결과
 
-정상적으로 적용되면 다음 파일이 생성됩니다.
+패처가 만드는 BIN과 ZIP에 동봉된 CUE를 같은 폴더에 준비합니다. 선택 사항인 Python 적용기는 두 파일을 함께 출력합니다.
 
 - `Der Langrisser FX Korean.bin`
 - `Der Langrisser FX Korean.cue`
 
 결과 BIN:
 
-- 크기: 778,669,584바이트
-- SHA-256: `e3a31e66bbd6ca02a0f3aedc4008c2917f94b9d76e3674daba708735a4c3ef99`
+- 크기: 778,808,352바이트
+- SHA-256: `383741adcb59636728c649971db799041c32074c872a0ec50b15cf26a936bbd3`
 
 에뮬레이터에서는 **`Der Langrisser FX Korean.cue`**를 실행하십시오. 원본 CUE를 한국어판 BIN에 재사용하지 마십시오.
 
